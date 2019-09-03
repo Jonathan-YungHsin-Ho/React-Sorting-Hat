@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import './App.css';
 
+import { HouseData } from './HouseData';
+
 import Questions from './components/Questions';
 import House from './components/House';
 
@@ -15,9 +17,19 @@ class App extends Component {
           houses of Hogwarts you belong to...
         </p>
         {/* <Questions /> */}
-        <div>{/* <NavLink to={`/${house}`}>{name}</NavLink> */}</div>
-        {/* <House /> */}
-        <Route path={`/:house`} render={props => <House {...props} />} />
+        <div>
+          {HouseData.map(({ name, id }) => (
+            <NavLink to={`/${name}`} key={id}>
+              {name}
+            </NavLink>
+          ))}
+        </div>
+        {HouseData.map(house => (
+          <Route
+            path={`/${house.name}`}
+            render={props => <House {...props} key={house.id} house={house} />}
+          />
+        ))}
       </div>
     );
   }
