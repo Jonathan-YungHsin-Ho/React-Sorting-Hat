@@ -7,6 +7,8 @@ export const HouseData = [
     founder: 'Godric Gryffindor',
     values: ['bravery', 'daring', 'nerve', 'chivalry'],
     wizards: ['Albus Dumbledore', 'Harry Potter', 'Minerva McGonagall'],
+    maincolor: '#B51D25',
+    textcolor: '#FBF14F',
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const HouseData = [
     founder: 'Helga Hufflepuff',
     values: ['hard work', 'dedication', 'patience', 'loyalty', 'fair play'],
     wizards: ['Hengist of Woodcroft', 'Newt Scamander', 'Artemisia Lufkin'],
+    maincolor: 'black',
+    textcolor: '#F7E06E',
   },
   {
     id: 3,
@@ -30,6 +34,8 @@ export const HouseData = [
       'Garrick Ollivander',
       `Alastor "Mad-Eye" Moody`,
     ],
+    maincolor: '#4B4242',
+    textcolor: '#C0E0F2',
   },
   {
     id: 4,
@@ -39,5 +45,7 @@ export const HouseData = [
     founder: 'Salazar Slytherin',
     values: ['ambition', 'cunning', 'resourcefulness'],
     wizards: ['Merlin', 'Tom Riddle', 'Dolores Umbridge'],
+    maincolor: '#055D3D',
+    textcolor: '#D5DAEC',
   },
 ];
