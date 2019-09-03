@@ -23,6 +23,7 @@ const FormWrapper = styled.div`
   button {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
+    padding: 10px 10%;
   }
 `;
 
@@ -46,19 +47,26 @@ class Questions extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     const answerArray = Object.values(this.state);
-    console.log(answerArray);
+    // console.log(answerArray);
     const counts = answerArray.reduce((accumulator, current) => {
       accumulator[current] = (accumulator[current] || 0) + 1;
       return accumulator;
     }, {});
-    console.log(counts);
+    // console.log(counts);
     const maxCount = Math.max(...Object.values(counts));
-    console.log(maxCount);
+    // console.log(maxCount);
     const mostFrequent = Object.keys(counts).filter(
       house => counts[house] === maxCount,
     );
+    // console.log(mostFrequent);
 
-    this.props.history.push(`/${mostFrequent[0]}`);
+    if (mostFrequent.length > 1) {
+      const random = Math.floor(Math.random() * mostFrequent.length);
+      // console.log(random);
+      this.props.history.push(`/${mostFrequent[random]}`);
+    } else {
+      this.props.history.push(`/${mostFrequent[0]}`);
+    }
   };
 
   render() {
