@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FormWrapper = styled.div`
-  width: 50%;
+  width: 80%;
+  max-width: 550px;
   margin: 50px auto;
   background-color: white;
   opacity: 0.9;

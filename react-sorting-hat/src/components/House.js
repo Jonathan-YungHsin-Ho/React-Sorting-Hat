@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HouseCard = styled.div`
-  width: 60%;
+  width: 80%;
+  max-width: 550px;
   margin: 50px auto;
   background-color: white;
   opacity: 0.9;
@@ -14,8 +15,12 @@ const HouseCard = styled.div`
     font-size: 30px;
   }
 
+  p {
+    margin: 20px 2%;
+  }
+
   ul {
-    width: 25%;
+    width: 50%;
     margin: 0 auto;
   }
 

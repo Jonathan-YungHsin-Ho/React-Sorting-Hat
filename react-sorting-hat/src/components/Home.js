@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const HomeWrapper = styled.div`
-  width: 50%;
+  width: 80%;
+  max-width: 550px;
   margin: 50px auto;
   background-color: white;
   opacity: 0.9;

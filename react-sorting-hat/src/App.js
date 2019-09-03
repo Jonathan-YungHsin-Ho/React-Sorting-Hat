@@ -34,8 +34,15 @@ const AppWrapper = styled.div`
     margin-top: 20px;
   }
 
+  .banner-img {
+    width: 90%;
+    max-width: 550px;
+  }
+
   .sorting-hat {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 `;
 
@@ -51,6 +58,7 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"> */}
             <img
+              className="banner-img"
               alt="banner"
               // src="https://fontmeme.com/permalink/190903/a6aa0c74a3b8e52d4e4b7695abf6e77d.png"
               src="https://fontmeme.com/permalink/190903/e97dd61d974c9e8a754e42114160974e.png"
